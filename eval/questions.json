@@ -1,0 +1,122 @@
+[
+  {
+    "question": "How long does it take to train the GFM-RAG model on NVIDIA A100 GPUs?",
+    "expected_id": "chunk_229"
+  },
+  {
+    "question": "What percentage improvement in throughput does the Patchwork framework achieve?",
+    "expected_id": "chunk_94"
+  },
+  {
+    "question": "What happens to the effectiveness of the attack when the format is changed from binary questions to questions with multiple answer options?",
+    "expected_id": "chunk_366"
+  },
+  {
+    "question": "What types of applications are best suited for systems that use knowledge graphs to improve information retrieval?",
+    "expected_id": "chunk_66"
+  },
+  {
+    "question": "How many rating levels were used when judges assessed the quality of responses produced by the language models?",
+    "expected_id": "chunk_267"
+  },
+  {
+    "question": "What are some examples of frameworks that enable multiple AI agents to work together in retrieval-augmented generation systems?",
+    "expected_id": "chunk_65"
+  },
+  {
+    "question": "Which retrieval system achieved the highest score in the evaluation results?",
+    "expected_id": "chunk_315"
+  },
+  {
+    "question": "How many different large language models were compared in the research on Islamic scripture question-answering systems?",
+    "expected_id": "chunk_257"
+  },
+  {
+    "question": "How does a natural language database query system process a user's request from start to finish?",
+    "expected_id": "chunk_19"
+  },
+  {
+    "question": "What conference published the dense passage retrieval paper by Karpukhin and colleagues in 2020?",
+    "expected_id": "chunk_213"
+  },
+  {
+    "question": "What dataset contains questions that can be created by combining multiple single-hop queries?",
+    "expected_id": "chunk_217"
+  },
+  {
+    "question": "What two methods did the researchers use to test whether existing attack queries could evade detection systems?",
+    "expected_id": "chunk_346"
+  },
+  {
+    "question": "What topics are covered in the supplementary experimental results section of this paper?",
+    "expected_id": "chunk_221"
+  },
+  {
+    "question": "Did researchers find any trials examining diet modification programs specifically targeting tooth erosion prevention?",
+    "expected_id": "chunk_398"
+  },
+  {
+    "question": "What are the different components of a RAG system that can experience security or reliability problems?",
+    "expected_id": "chunk_81"
+  },
+  {
+    "question": "How is the quality of context retrieval measured in this system's evaluation framework?",
+    "expected_id": "chunk_265"
+  },
+  {
+    "question": "How many attacks out of the seven tested could be completely blocked by using an existing off-the-shelf detection system?",
+    "expected_id": "chunk_347"
+  },
+  {
+    "question": "How does the system prevent the language model from making up information when generating the final answer?",
+    "expected_id": "chunk_133"
+  },
+  {
+    "question": "What problem does the FAIR-RAG system address in current retrieval-augmented generation approaches?",
+    "expected_id": "chunk_117"
+  },
+  {
+    "question": "What is the main limitation that prevents current graph neural network approaches from being more broadly applicable in retrieval-augmented generation systems?",
+    "expected_id": "chunk_193"
+  },
+  {
+    "question": "What year was the seminal paper on retrieval-augmented generation for knowledge-intensive NLP tasks published?",
+    "expected_id": "chunk_287"
+  },
+  {
+    "question": "Which system achieved the highest scores in both weighted precision and weighted recall metrics according to the automatic relevance assessments?",
+    "expected_id": "chunk_327"
+  },
+  {
+    "question": "How does the system maintain reliability when database queries fail or encounter problems?",
+    "expected_id": "chunk_12"
+  },
+  {
+    "question": "What assumption do previous membership inference attacks on RAG systems make that differs from the threat model described here?",
+    "expected_id": "chunk_345"
+  },
+  {
+    "question": "Which research group achieved the highest weighted precision score in the agentic generation task?",
+    "expected_id": "chunk_329"
+  },
+  {
+    "question": "What year was the Phi-3 technical report published?",
+    "expected_id": "chunk_290"
+  },
+  {
+    "question": "What year was the HotpotQA dataset introduced?",
+    "expected_id": "chunk_219"
+  },
+  {
+    "question": "How is the grading scale structured for evaluating how many parts of a user's story are covered in a retrieved document?",
+    "expected_id": "chunk_303"
+  },
+  {
+    "question": "Did the researchers obtain permission and follow the proper attribution requirements for third-party resources incorporated into their study?",
+    "expected_id": "chunk_253"
+  },
+  {
+    "question": "What is the cost per document for performing the membership inference attack described by the authors?",
+    "expected_id": "chunk_334"
+  }
+]
