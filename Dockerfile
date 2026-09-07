@@ -10,6 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY embeddings/ ./embeddings/
 COPY ingestion/ ./ingestion/
 COPY vectorstore/ ./vectorstore/
+COPY retrieval/ ./retrieval/
 COPY generation/ ./generation/
 COPY static/ ./static/
 COPY api.py .
