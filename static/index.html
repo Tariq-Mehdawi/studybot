@@ -33,7 +33,27 @@
   h1 { font-size: 1.6rem; font-weight: 500; margin: 0 0 .25rem; letter-spacing: -0.01em; }
   header p { margin: 0; color: var(--muted); font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: .85rem; }
 
-  .empty { color: var(--muted); font-style: italic; }
+  .lead {
+    color: var(--muted);
+    font-size: .95rem;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+  }
+  .starters { list-style: none; padding: 0; margin: 1.25rem 0 0; }
+  .starters li { margin-bottom: .5rem; }
+  .starter {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: .9rem;
+    text-align: left;
+    padding: .55rem .8rem;
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .starter:hover { border-color: var(--accent); }
+  .starter:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
 
   .turn { margin-bottom: 2.5rem; }
   .q {
@@ -72,7 +92,7 @@
     border-radius: 3px;
   }
   input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
-  button {
+  button#send {
     font-family: "IBM Plex Sans", system-ui, sans-serif;
     font-size: .95rem;
     padding: .7rem 1.4rem;
@@ -82,18 +102,30 @@
     color: #fff;
     cursor: pointer;
   }
-  button:disabled { opacity: .45; cursor: default; }
+  button#send:disabled { opacity: .45; cursor: default; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <h1>StudyBot</h1>
-    <p>Answers drawn from a corpus of arXiv papers on retrieval-augmented generation.</p>
+    <p>Answers drawn from eight arXiv papers on retrieval-augmented generation.</p>
   </header>
-  <div id="log">
-    <p class="empty">Ask a question to begin. Anything outside the papers gets turned down rather than guessed at.</p>
+
+  <div id="intro">
+    <p class="lead">The corpus covers RAG architecture and engineering, graph-based retrieval, multi-agent pipelines, iterative refinement for faithfulness, benchmark results from the TREC 2025 RAG track, an application to Quranic studies, and a membership-inference attack on RAG systems.</p>
+
+    <p class="lead">Questions outside those papers are turned down rather than guessed at. Try one of these:</p>
+
+    <ul class="starters">
+      <li><button class="starter">What is FAIR-RAG and what problem does it solve?</button></li>
+      <li><button class="starter">How does GFM-RAG use graph foundation models for retrieval?</button></li>
+      <li><button class="starter">What is a membership inference attack on a RAG system?</button></li>
+      <li><button class="starter">How do multi-agent RAG systems coordinate with each other?</button></li>
+    </ul>
   </div>
+
+  <div id="log"></div>
 </div>
 
 <div class="bar">
@@ -107,13 +139,13 @@
 const log = document.getElementById('log');
 const input = document.getElementById('q');
 const button = document.getElementById('send');
+const intro = document.getElementById('intro');
 
 async function ask() {
   const text = input.value.trim();
   if (!text) return;
 
-  const empty = log.querySelector('.empty');
-  if (empty) empty.remove();
+  if (intro && intro.parentNode) intro.remove();
 
   const turn = document.createElement('div');
   turn.className = 'turn';
@@ -160,6 +192,13 @@ async function ask() {
   input.focus();
   window.scrollTo(0, document.body.scrollHeight);
 }
+
+document.querySelectorAll('.starter').forEach(b => {
+  b.addEventListener('click', () => {
+    input.value = b.textContent;
+    ask();
+  });
+});
 
 button.addEventListener('click', ask);
 input.addEventListener('keydown', e => { if (e.key === 'Enter') ask(); });
