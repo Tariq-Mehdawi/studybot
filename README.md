@@ -1,5 +1,7 @@
 # StudyBot
 
+**Live demo: https://studybot-o1sb.onrender.com**
+
 A retrieval-augmented generation system that answers questions about a corpus of arXiv papers on RAG, with measured retrieval quality and documented failure modes.
 
 Ask it something covered by the papers and it answers from them. Ask it anything else and it says so instead of guessing.
